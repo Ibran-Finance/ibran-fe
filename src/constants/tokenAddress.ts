@@ -18,9 +18,9 @@ export const tokens: Token[] = [
     },
   },
   {
-    name: "WBTC",
-    symbol: "WBTC",
-    logo: "/token/wbtc.png",
+    name: "lstBTC",
+    symbol: "lstBTC",
+    logo: "/token/lstBTC-logo.png",
     decimals: 8,
     addresses: {
       1114: "0x3217D2b65Df07C7FD5BBa61144ad4B7ec623E311",
