@@ -8,7 +8,7 @@ const DocsRedirectPage: React.FC = () => {
   const router = useRouter();
   const [animationPhase, setAnimationPhase] = useState(0);
   const [redirecting, setRedirecting] = useState(false);
-  const targetUrl = "https://mbel-finance.gitbook.io/mbel-finance-docs";
+  const targetUrl = "https://ibran-finance.gitbook.io/ibran-finance-docs";
 
   useEffect(() => {
     // Start the animation sequence
@@ -67,7 +67,7 @@ const DocsRedirectPage: React.FC = () => {
           <h1 className={`text-4xl md:text-5xl font-bold text-white transition-all duration-1000 ease-out ${
             animationPhase >= 1 ? 'translate-y-0 opacity-100' : 'translate-y-8 opacity-0'
           }`}>
-            Mbel Finance
+            Ibran Finance
           </h1>
           
           <p className={`text-xl text-gray-300 transition-all duration-1000 delay-300 ease-out ${

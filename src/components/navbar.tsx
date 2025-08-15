@@ -68,7 +68,7 @@ export const NavbarNeon = () => {
           <Link href="/" className="flex items-center">
             <Image
               src="/ibranlogos.png"
-              alt="MbelFi Logo"
+              alt="Iban Logo"
               width={50}
               height={50}
               className="drop-shadow-lg hover:scale-105 transition-transform duration-200"
