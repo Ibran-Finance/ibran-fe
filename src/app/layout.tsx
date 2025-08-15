@@ -1,0 +1,62 @@
+import type { Metadata, Viewport } from "next";
+import { Geist, Geist_Mono } from "next/font/google";
+import "./globals.css";
+import { Providers } from "./providers";
+import GlowingGridBackground from "@/components/glowing-grid-background";
+import { NavbarNeon } from "@/components/navbar";
+import { Toaster } from "sonner";
+
+const geistSans = Geist({
+  variable: "--font-geist-sans",
+  subsets: ["latin"],
+});
+
+const geistMono = Geist_Mono({
+  variable: "--font-geist-mono",
+  subsets: ["latin"],
+});
+
+export const metadata: Metadata = {
+  title: "CAER",
+  description: "Permsissionless Lending Protocol",
+  icons: {
+    icon: "/mbelbluelogo.png",
+    shortcut: "/mbelbluelogo.png",
+    apple: "/mbelbluelogo.png",
+  },
+};
+
+export const viewport: Viewport = {
+  width: "device-width",
+  initialScale: 1,
+  maximumScale: 1,
+  userScalable: false,
+};
+
+export default function RootLayout({
+  children,
+}: Readonly<{
+  children: React.ReactNode;
+}>) {
+  return (
+    <html lang="en" suppressHydrationWarning>
+      <body
+        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
+      >
+        <Providers>
+          <GlowingGridBackground />
+          <Toaster />
+          <div className="mx-2">
+            <NavbarNeon />
+
+            <div className="relative flex flex-col h-screen">
+              <main className="container mx-auto max-w-7xl pt-8 flex-grow">
+                {children}
+              </main>
+            </div>
+          </div>
+        </Providers>
+      </body>
+    </html>
+  );
+}
