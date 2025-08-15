@@ -67,7 +67,7 @@ export const NavbarNeon = () => {
         <div className="flex items-center justify-between">
           <Link href="/" className="flex items-center">
             <Image
-              src="/mbelbluelogo.png"
+              src="/ibranlogos.png"
               alt="MbelFi Logo"
               width={50}
               height={50}

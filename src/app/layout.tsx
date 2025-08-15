@@ -20,9 +20,9 @@ export const metadata: Metadata = {
   title: "IBRAN",
   description: "Permsissionless Lending Protocol",
   icons: {
-    icon: "/mbelbluelogo.png",
-    shortcut: "/mbelbluelogo.png",
-    apple: "/mbelbluelogo.png",
+    icon: "/ibranlogos.png",
+    shortcut: "/ibranlogos.png",
+    apple: "/ibranlogos.png",
   },
 };
 
