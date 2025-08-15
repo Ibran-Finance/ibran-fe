@@ -15,10 +15,6 @@ export const useReadPositionBalance = (
     functionName: "balanceOf",
     args: [addressPosition as `0x${string}`],
   });
-
-  console.log("position balance",positionBalance);
-  console.log("tokenAddess",tokenAddress);
-  console.log("position address",addressPosition);
   return {
     positionBalance,
     isLoadingPositionBalance,

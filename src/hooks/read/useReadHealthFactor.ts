@@ -17,7 +17,6 @@ export const useReadHealthFactor = (lendingPoolAddress: string) => {
     functionName: "getHealthFactor",
     args: [lendingPoolAddress as `0x${string}`, address as `0x${string}`],
   });
-  console.log(healthFactor);
   return {
     healthFactor,
     isLoadingHealthFactor,
