@@ -6,12 +6,16 @@ import { useTotalCollateralInUsdt } from "@/hooks/read/useTotalCollateralInUsdt"
 import { useReadUserBorrowShares } from "@/hooks/read/useUserBorrowShares";
 import { useReadHealthFactor } from "@/hooks/read/useReadHealthFactor";
 import { EnrichedPool } from "@/lib/pair-token-address";
+import { useAccount } from "wagmi";
+import ButtonConnectWallet from "@/components/button-connect-wallet";
 
 interface StatsCardProps {
   pool: EnrichedPool | null;
 }
 
 export const StatsCard: React.FC<StatsCardProps> = ({ pool }) => {
+  const { isConnected } = useAccount();
+
   // Always call hooks with default values to maintain hook order
   const poolId = (pool?.id as `0x${string}`) || "0x0000000000000000000000000000000000000000";
   const collateralToken = (pool?.collateralToken as `0x${string}`) || "0x0000000000000000000000000000000000000000";
@@ -46,6 +50,27 @@ export const StatsCard: React.FC<StatsCardProps> = ({ pool }) => {
     const healthFactorNumber = Number(healthFactor) / 1e8;
     return healthFactorNumber.toFixed(2);
   };
+
+  // Show wallet connection requirement if user is not connected
+  if (!isConnected) {
+    return (
+      <Card className="border border-cyan-800 py-2 w-full max-w-full bg-gray-900 text-gray-100 shadow-xl">
+        <CardContent className="w-full flex flex-col mx-auto px-6 py-8 justify-center items-center">
+          <div className="text-center mb-6">
+            <span className="text-gray-400 text-lg font-medium block mb-2">
+              Connect Your Wallet
+            </span>
+            <span className="text-blue-400 text-sm">
+              Connect your wallet to view your collateral, debt, and health factor
+            </span>
+          </div>
+          <div className="w-48">
+            <ButtonConnectWallet />
+          </div>
+        </CardContent>
+      </Card>
+    );
+  }
 
   if (!pool) {
     return (

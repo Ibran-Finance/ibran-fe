@@ -3,7 +3,7 @@ import { motion } from "framer-motion";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
-import { Search, Plus } from "lucide-react";
+import { Plus } from "lucide-react";
 import { CreatePoolDialog } from "@/components/dialog/create-pool";
 import Image from "next/image";
 import { getPools } from "@/lib/get-pools";
@@ -14,7 +14,6 @@ import { StatsCard } from "@/components/home/StatsCard";
 import { PoolSelector } from "@/components/home/PoolSelector";
 import { PositionAddress } from "@/components/home/PositionAddress";
 import { TokenTable } from "@/components/home/TokenTable";
-import { TotalCollateralUSDTCard } from "@/components/home/TotalCollateralUSDTCard";
 const DesktopView = () => {
   const [isMobile, setIsMobile] = React.useState(false);
   const [createPoolOpen, setCreatePoolOpen] = React.useState(false);
@@ -87,7 +86,6 @@ const DesktopView = () => {
       />
 
       <div className="flex flex-col gap-4 w-full mx-auto">
-
         {/* Stats Card - Dinamis berdasarkan pool yang dipilih */}
         <StatsCard pool={selectedPool} />
 
@@ -99,21 +97,21 @@ const DesktopView = () => {
                 <div className="text-2xl">💰</div>
                 <h2 className="text-xl font-bold text-white">Lending Pool</h2>
               </div>
-              <motion.div 
+              <motion.div
                 className="w-80 lg:w-96"
                 initial={{ opacity: 0, y: 30, scale: 0.95 }}
                 animate={{ opacity: 1, y: 0, scale: 1 }}
                 exit={{ opacity: 0, y: -20, scale: 0.98 }}
-                transition={{ 
+                transition={{
                   duration: 1,
                   ease: [0.34, 1.56, 0.64, 1],
                   opacity: { duration: 0.7, ease: "easeOut" },
                   y: { duration: 1, ease: [0.34, 1.56, 0.64, 1] },
-                  scale: { duration: 0.8, ease: "easeOut" }
+                  scale: { duration: 0.8, ease: "easeOut" },
                 }}
-                whileHover={{ 
+                whileHover={{
                   scale: 1.02,
-                  transition: { duration: 0.2 }
+                  transition: { duration: 0.2 },
                 }}
               >
                 <PoolSelector
@@ -146,16 +144,9 @@ const DesktopView = () => {
                 Pool Overview
               </CardTitle>
               <div className="flex items-center space-x-4">
-                <div className="relative">
-                  <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400 w-4 h-4" />
-                  <Input
-                    placeholder="Search pools..."
-                    className="w-full pl-10 bg-gray-700 border-gray-600 hover:border-blue-500 text-gray-100"
-                  />
-                </div>
                 <Button
                   variant="default"
-                  className="w-3/5 bg-blue-600 hover:bg-blue-700"
+                  className="w-full bg-blue-600 hover:bg-blue-700"
                   onClick={() => setCreatePoolOpen(true)}
                 >
                   <Plus className="mr-2 w-4 h-4" />
