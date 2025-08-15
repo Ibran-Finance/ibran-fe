@@ -1,6 +1,7 @@
 "use client";
 import Hero from "./components/hero";
-import Sponsored from "./components/sponsored";
+import HowToUse from "./components/how-to-use";
+import Features from "./components/features";
 
 import React from "react";
 
@@ -9,7 +10,8 @@ const Page = () => {
     <div className="relative">
       <Hero />
       <div className="relative">
-        <Sponsored />
+        <HowToUse />
+        <Features />
       </div>
     </div>
   );

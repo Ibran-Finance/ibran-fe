@@ -19,7 +19,6 @@ export const NavbarNeon = () => {
     { id: "home", label: "Home", href: "/home" },
     { id: "dashboard", label: "Dashboard", href: "/dashboard" },
     { id: "swap", label: "Swap", href: "/swap" },
-    { id: "history", label: "History", href: "/history" },
     { id: "docs", label: "Docs", href: "/docs" },
     { id: "faucet", label: "Faucets", href: "/faucets" },
   ];
