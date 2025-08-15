@@ -32,7 +32,7 @@ function AnimateBlurText() {
         }}
         whileTap={{ scale: 0.95 }}
       >
-        CAER
+        IBRAN
       </motion.h1>
       <BlurText
         text="Built on Core"

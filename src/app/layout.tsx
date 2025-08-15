@@ -17,7 +17,7 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "CAER",
+  title: "IBRAN",
   description: "Permsissionless Lending Protocol",
   icons: {
     icon: "/mbelbluelogo.png",

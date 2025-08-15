@@ -1,4 +1,4 @@
-# CAER - Permissionless Lending Protocol
+# IBRAN - Permissionless Lending Protocol
 
 A decentralized lending protocol built with Next.js, featuring Web3 integration and Telegram Mini App support.
 
@@ -37,7 +37,7 @@ Deploy the `out` folder to any static hosting service:
 2. Create a new bot or select existing bot
 3. Use `/newapp` command
 4. Select your bot
-5. Enter app title: "CAER DeFi"
+5. Enter app title: "IBRAN DeFi"
 6. Enter short description: "Permissionless Lending Protocol"
 7. Upload app icon (use `/mbelbluelogo.png`)
 8. Enter your deployed app URL

@@ -75,7 +75,7 @@ export const NavbarNeon = () => {
               className="drop-shadow-lg hover:scale-105 transition-transform duration-200"
             />
             <div className="text-2xl font-bold text-cyan-400 drop-shadow-lg">
-              <span className="text-shadow-neon">CAER</span>
+              <span className="text-shadow-neon">IBRAN</span>
             </div>
           </Link>
           <div
